@@ -11,6 +11,8 @@ import { AppearanceProvider, useColorScheme } from 'react-native-appearance'
 import DT from './darkTheme'
 import myDarkTheme from './darkTheme'
 import Task from './components/Task'
+import { Icon } from 'react-native-elements'
+
 
 //Create task view and pass props from app
 //create add-task view and once added, have them show up in the task view
@@ -70,7 +72,7 @@ function HomeScreen() {
         >
           <TextInput 
             style={styles.input}
-            placeholder="Hello"
+            placeholder="Add a task..."
             onChangeText={text => setTask(text)}
             value={task}
           />
@@ -90,7 +92,13 @@ const HomeStack = createStackNavigator()
 function HomeScrenStack({ navigation }) {
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen name="Today's Tasks" component={HomeScreen}></HomeStack.Screen>
+      <HomeStack.Screen
+       name="Today's Tasks" 
+       component={HomeScreen}
+       
+        
+       
+       />
     </HomeStack.Navigator>
   )
 }
